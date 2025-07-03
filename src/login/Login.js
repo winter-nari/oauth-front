@@ -20,7 +20,7 @@ const Login = () => {
       localStorage.setItem("token", res.data.data.accessToken);
 
       // 로그인 후 /rooms 페이지로 이동
-      navigate("/rooms");
+      navigate("/me");
     } catch (error) {
       alert("로그인 실패: 이메일과 비밀번호를 확인하세요.");
     }
