@@ -1,0 +1,93 @@
+[debug] [2025-07-06T07:59:20.903Z] ----------------------------------------------------------------------
+[debug] [2025-07-06T07:59:20.904Z] Command:       /opt/homebrew/Cellar/node/23.6.1/bin/node /opt/homebrew/bin/firebase deploy --debug
+[debug] [2025-07-06T07:59:20.904Z] CLI Version:   13.32.0
+[debug] [2025-07-06T07:59:20.904Z] Platform:      darwin
+[debug] [2025-07-06T07:59:20.904Z] Node Version:  v23.6.1
+[debug] [2025-07-06T07:59:20.905Z] Time:          Sun Jul 06 2025 16:59:20 GMT+0900 (대한민국 표준시)
+[debug] [2025-07-06T07:59:20.905Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-07-06T07:59:20.972Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-07-06T07:59:20.972Z] > authorizing via signed-in user (rlawjddnsj8371@gmail.com)
+[debug] [2025-07-06T07:59:20.972Z] [iam] checking project test1-fbe39 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-07-06T07:59:20.973Z] Checked if tokens are valid: true, expires at: 1751790155281
+[debug] [2025-07-06T07:59:20.973Z] Checked if tokens are valid: true, expires at: 1751790155281
+[debug] [2025-07-06T07:59:20.973Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/test1-fbe39:testIamPermissions [none]
+[debug] [2025-07-06T07:59:20.973Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/test1-fbe39:testIamPermissions x-goog-quota-user=projects/test1-fbe39
+[debug] [2025-07-06T07:59:20.973Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/test1-fbe39:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-07-06T07:59:21.284Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/test1-fbe39:testIamPermissions 200
+[debug] [2025-07-06T07:59:21.285Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/test1-fbe39:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-07-06T07:59:21.286Z] Checked if tokens are valid: true, expires at: 1751790155281
+[debug] [2025-07-06T07:59:21.286Z] Checked if tokens are valid: true, expires at: 1751790155281
+[debug] [2025-07-06T07:59:21.286Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/test1-fbe39 [none]
+[debug] [2025-07-06T07:59:21.720Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/test1-fbe39 200
+[debug] [2025-07-06T07:59:21.721Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/test1-fbe39 {"projectId":"test1-fbe39","projectNumber":"989787584652","displayName":"test1","name":"projects/test1-fbe39","resources":{"hostingSite":"test1-fbe39"},"state":"ACTIVE","etag":"1_21206993-d0a4-4f39-836e-5c934355526c"}
+[info] 
+[info] === Deploying to 'test1-fbe39'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2025-07-06T07:59:21.726Z] Checked if tokens are valid: true, expires at: 1751790155281
+[debug] [2025-07-06T07:59:21.726Z] Checked if tokens are valid: true, expires at: 1751790155281
+[debug] [2025-07-06T07:59:21.726Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/test1-fbe39/versions [none]
+[debug] [2025-07-06T07:59:21.726Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/test1-fbe39/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-07-06T07:59:22.814Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/test1-fbe39/versions 200
+[debug] [2025-07-06T07:59:22.814Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/test1-fbe39/versions {"name":"projects/989787584652/sites/test1-fbe39/versions/c991890a331b6bed","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[test1-fbe39]: beginning deploy... 
+[info] i  hosting[test1-fbe39]: found 12 files in build 
+[debug] [2025-07-06T07:59:22.830Z] [hosting] uploading with 200 concurrency
+[debug] [2025-07-06T07:59:22.832Z] Checked if tokens are valid: true, expires at: 1751790155281
+[debug] [2025-07-06T07:59:22.832Z] Checked if tokens are valid: true, expires at: 1751790155281
+[debug] [2025-07-06T07:59:22.832Z] [hosting] hash cache [YnVpbGQ] stored for 12 files
+[debug] [2025-07-06T07:59:22.832Z] [hosting][hash queue][FINAL] {"max":1,"min":0,"avg":1,"active":0,"complete":12,"success":12,"errored":0,"retried":0,"total":12,"elapsed":1}
+[debug] [2025-07-06T07:59:22.832Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/989787584652/sites/test1-fbe39/versions/c991890a331b6bed:populateFiles [none]
+[debug] [2025-07-06T07:59:22.832Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/989787584652/sites/test1-fbe39/versions/c991890a331b6bed:populateFiles {"files":{"/robots.txt":"391d14b3c2f8c9143a27a28c7399585142228d4d1bdbe2c87ac946de411fa9a2","/manifest.json":"341d52628782f8ac9290bbfc43298afccb47b7cbfcee146ae30cf0f46bc30900","/logo512.png":"191fc21360b4ccfb1cda11a1efb97f489ed22672ca83f4064316802bbfdd750e","/logo192.png":"caff018b7f1e8fd481eb1c50d75b0ef236bcd5078b1d15c8bb348453fee30293","/index.html":"e129682a172f94e34e7918012762b99bc9928b8965541915b8b2e166dd577c27","/favicon.ico":"b72f7455f00e4e58792d2bca892abb068e2213838c0316d6b7a0d6d16acd1955","/asset-manifest.json":"6a7e9db73287ffb88184699e8785fee748f52152c44c3a671500728b694fa407","/static/js/main.29734893.js.map":"e1d13eedd0eab5076306332ee661c711871ff994de3113a7ded658d747babbd2","/static/js/main.29734893.js.LICENSE.txt":"532394fb719c8c480b20baa5d7bb5e98fe5c929f69369f9884df8a2e68c22a3c","/static/js/main.29734893.js":"eb95ec876571f8974e0854e33938024550c2170ce050e24f454f20a8f7676554","/static/css/main.630b6e32.css.map":"e71c02f1e4904056ca3ce7d8e52b795e84a90284deb1f20c0452a26c20dbb47c","/static/css/main.630b6e32.css":"ec0fd6a16db342e0d3321ecea2dfda8217afffb3a3babbd170f2488e5933d883"}}
+[debug] [2025-07-06T07:59:23.349Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/989787584652/sites/test1-fbe39/versions/c991890a331b6bed:populateFiles 200
+[debug] [2025-07-06T07:59:23.350Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/989787584652/sites/test1-fbe39/versions/c991890a331b6bed:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/test1-fbe39/versions/c991890a331b6bed/files"}
+[debug] [2025-07-06T07:59:23.350Z] [hosting][populate queue][FINAL] {"max":518,"min":518,"avg":518,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":518}
+[debug] [2025-07-06T07:59:23.350Z] [hosting] uploads queued: 0
+[debug] [2025-07-06T07:59:23.351Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1751788763351}
+[info] i  hosting: upload complete 
+[info] ✔  hosting[test1-fbe39]: file upload complete 
+[debug] [2025-07-06T07:59:23.351Z] [hosting] deploy completed after 534ms
+[debug] [2025-07-06T07:59:23.351Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "test1-fbe39"
+    },
+    "version": "projects/989787584652/sites/test1-fbe39/versions/c991890a331b6bed"
+  }
+]
+[info] i  hosting[test1-fbe39]: finalizing version... 
+[debug] [2025-07-06T07:59:23.353Z] Checked if tokens are valid: true, expires at: 1751790155281
+[debug] [2025-07-06T07:59:23.353Z] Checked if tokens are valid: true, expires at: 1751790155281
+[debug] [2025-07-06T07:59:23.354Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/test1-fbe39/versions/c991890a331b6bed updateMask=status%2Cconfig
+[debug] [2025-07-06T07:59:23.354Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/test1-fbe39/versions/c991890a331b6bed {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2025-07-06T07:59:23.870Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/test1-fbe39/versions/c991890a331b6bed 200
+[debug] [2025-07-06T07:59:23.870Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/test1-fbe39/versions/c991890a331b6bed {"name":"projects/989787584652/sites/test1-fbe39/versions/c991890a331b6bed","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-07-06T07:59:22.422773Z","createUser":{"email":"rlawjddnsj8371@gmail.com"},"finalizeTime":"2025-07-06T07:59:23.644054Z","finalizeUser":{"email":"rlawjddnsj8371@gmail.com"}}
+[debug] [2025-07-06T07:59:23.870Z] [hosting] finalized version for test1-fbe39:[object Object]
+[info] ✔  hosting[test1-fbe39]: version finalized 
+[info] i  hosting[test1-fbe39]: releasing new version... 
+[debug] [2025-07-06T07:59:23.871Z] Checked if tokens are valid: true, expires at: 1751790155281
+[debug] [2025-07-06T07:59:23.871Z] Checked if tokens are valid: true, expires at: 1751790155281
+[debug] [2025-07-06T07:59:23.871Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/test1-fbe39/channels/live/releases versionName=projects%2F989787584652%2Fsites%2Ftest1-fbe39%2Fversions%2Fc991890a331b6bed
+[debug] [2025-07-06T07:59:23.871Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/test1-fbe39/channels/live/releases {}
+[debug] [2025-07-06T07:59:24.371Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/test1-fbe39/channels/live/releases 200
+[debug] [2025-07-06T07:59:24.372Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/test1-fbe39/channels/live/releases {"name":"projects/989787584652/sites/test1-fbe39/channels/live/releases/1751788763592000","version":{"name":"projects/989787584652/sites/test1-fbe39/versions/c991890a331b6bed","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-07-06T07:59:22.422773Z","createUser":{"email":"rlawjddnsj8371@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJmTa8KJk1I2VWCV8zN-kaU0i2wmIJ3E-Z4CaCCMibGku8OUA=mo"},"finalizeTime":"2025-07-06T07:59:23.644054Z","finalizeUser":{"email":"rlawjddnsj8371@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJmTa8KJk1I2VWCV8zN-kaU0i2wmIJ3E-Z4CaCCMibGku8OUA=mo"}},"type":"DEPLOY","releaseTime":"2025-07-06T07:59:23.592Z","releaseUser":{"email":"rlawjddnsj8371@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJmTa8KJk1I2VWCV8zN-kaU0i2wmIJ3E-Z4CaCCMibGku8OUA=mo"}}
+[debug] [2025-07-06T07:59:24.372Z] [hosting] release: {"name":"projects/989787584652/sites/test1-fbe39/channels/live/releases/1751788763592000","version":{"name":"projects/989787584652/sites/test1-fbe39/versions/c991890a331b6bed","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-07-06T07:59:22.422773Z","createUser":{"email":"rlawjddnsj8371@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJmTa8KJk1I2VWCV8zN-kaU0i2wmIJ3E-Z4CaCCMibGku8OUA=mo"},"finalizeTime":"2025-07-06T07:59:23.644054Z","finalizeUser":{"email":"rlawjddnsj8371@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJmTa8KJk1I2VWCV8zN-kaU0i2wmIJ3E-Z4CaCCMibGku8OUA=mo"}},"type":"DEPLOY","releaseTime":"2025-07-06T07:59:23.592Z","releaseUser":{"email":"rlawjddnsj8371@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJmTa8KJk1I2VWCV8zN-kaU0i2wmIJ3E-Z4CaCCMibGku8OUA=mo"}}
+[info] ✔  hosting[test1-fbe39]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/test1-fbe39/overview
+[info] Hosting URL: https://test1-fbe39.web.app

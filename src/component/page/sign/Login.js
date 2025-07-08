@@ -1,8 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
-const API = "http://localhost:8080";  // http:// 꼭 붙여주세요
+const API = "https://4c06b89555ee.ngrok.app";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -15,12 +15,8 @@ const Login = () => {
         email,
         password,
       });
-
-      // 로그인 성공 시 accessToken을 로컬스토리지에 저장
       localStorage.setItem("token", res.data.data.accessToken);
-
-      // 로그인 후 /rooms 페이지로 이동
-      navigate("/me");
+      navigate("/");
     } catch (error) {
       alert("로그인 실패: 이메일과 비밀번호를 확인하세요.");
     }
@@ -28,6 +24,11 @@ const Login = () => {
 
   return (
     <div style={{ maxWidth: 400, margin: "auto", padding: 20 }}>
+      {/* 뒤로가기 버튼 */}
+      <Link to="/" style={{ textDecoration: "none" }}>
+        <button style={{ marginBottom: 20 }}>← 뒤로가기</button>
+      </Link>
+
       <h2>Login</h2>
       <input
         type="email"
